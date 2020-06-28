@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="ja">
+	<head>
+		<title>防災INSIGHT 熱中症対策</title>
+  	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="熱中症の危険度をマップとリストで可視化しました。">
+	<meta property="og:title" content="防災INSIGHT 熱中症対策" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://linkevery2s.github.io/bsinsight/virusmap/index.html" />
+    <meta property="og:image" content="https://linkevery2s.github.io/bsinsight/virusmap/images/top.jpg" />
+    <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="防災INSIGHT 熱中症対策" />
+	<meta name="twitter:description" content="熱中症の危険度をマップとリストで可視化しました。" />
+	<meta name="twitter:image" content="https://linkevery2s.github.io/bsinsight/virusmap/images/top.jpg" />
+    <meta name="author" content="仁志">
+	<link rel="stylesheet" href="assets/css/map.css" />
+	<link rel="stylesheet" href="assets/css/maplist.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="apple-touch-icon" href="https://linkevery2s.github.io/bsinsight/virusmap/images/apple-touch-icon.jpg">
+    <link rel="shortcut icon" href="https://linkevery2s.github.io/bsinsight/virusmap/images/apple-touch-icon.jpg">
+	<link href="https://leafletjs-cdn.s3.amazonaws.com/content/leaflet/master/leaflet.css" rel="stylesheet" type="text/css" />
+    <script src="https://leafletjs-cdn.s3.amazonaws.com/content/leaflet/master/leaflet.js"></script>
+	<script src='assets/js/map.js'></script>
+
+	</head>
+	<body class="is-preload" onLoad="get_kansen()">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>防災INSIGHT 熱中症対策</strong></h1>
+					<p>熱中症の危険度をマップとリストで可視化しました。</p>
+				</div>
+			</header>
+
+
+
+		<!-- Main -->
+			<div id="main">
+
+					<section id="intro"><span id ="1"></span>
+					<h2>はじめに</h2>
+					<p>今年の夏は例年よりも厚いと言われています。新型コロナの影響でマスクされる方もみえて、例年よりも熱中症対策に本気で取り組む必要があります。本WEBは、熱中症の危険度を示す「暑さ指数」を可視化することが目的です。</p>
+					☆更新履歴☆
+						<div id="upr">
+							2020. 7. 1 本WEB公開
+						</div>
+					</section>
+
+					<section id="atusamap">
+						<h2>暑さ指数マップ</h2>
+
+						<blockquote>
+						観測地点における暑さ指数をマップに表示しています。
+						</blockquote>
+
+
+					</section>
+
+					<section id="atusalist">
+						<h2>暑さ指数リスト</h2>
+						
+						<blockquote>
+						暑さ指数マップをリストに変換し、掲載しています。
+						</blockquote>
+						
+
+					</section>
+
+					<section id="atusalist">
+						<h2>熱中症の基礎知識</h2>
+						
+						<blockquote>
+						・熱中症の基礎知識について、まとめました。
+						</blockquote>
+						
+
+					</section>
+
+					<section id="kanren"><span id ="7"></span>
+						<h2>関連情報</h2>
+
+							<h3 class="ti">関連リンク</h3>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-4"><a href="https://www.covid19-yamanaka.com/" target="_blank"><span class="image fit"><img src="images/thumbs/yamanaka.png" alt="" />山中伸弥による新型コロナウイルス情報発信 <i class="fas fa-external-link-alt"></i></span></a></div>
+									<div class="col-4"><a href="https://www.stopcovid19.jp/" target="_blank"><span class="image fit"><img src="images/thumbs/covid-19j.png" alt="" />新型コロナウイルス対策ダッシュボード <i class="fas fa-external-link-alt"></i></span></a></div>
+								</div>
+								
+							</div>
+							<hr>
+							<div class="row">
+							<div class="col-6 col-12-xsmall">
+							<h3 class="ti">参考文献</h3>
+									<ul>
+										<li><a href="https://linkevery2s.github.io/bsinsight/index.html" target="_blank">防災INSIGHT <i class="fas fa-external-link-alt"></i></a></li>
+										<li><a href="https://www.mhlw.go.jp/stf/houdou/index.html" target="_blank">厚生労働省 報道発表資料 <i class="fas fa-external-link-alt"></i></a></li>
+									</ul>
+							</div>
+								<div class="col-6 col-12-xsmall">
+									<h3 class="ti">ＱＲコード</h3>
+									本ＷＥＢのＱＲコードです。<br>
+									<img src="images/qr.png">
+								</div>
+							</div>
+					</section>
+
+※個人で開発したWEBです。正確な情報は環境省のウェブサイト等をご参照ください。<br>
+※なお、利用規約は、<a href="https://linkevery2s.github.io/bsinsight/#rule" target="_blank">防災INSIGHT 利用規約 <i class="fas fa-external-link-alt"></i></a>に準拠します。
+
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+
+					<ul class="copyright">
+						<li>&copy; 仁志</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+		
+		<div id="page_top"><a href="#"></a></div>
+		
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
