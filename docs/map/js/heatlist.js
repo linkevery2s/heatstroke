@@ -20,9 +20,10 @@ xhr.send(null);
 			
 			for ( i = 0; i < 840; i++){
 				var list_data = json_data[i][js_data] / 10;
-				/* リストに追加 */
+				/* リストに追加 
+				pref(json_data[i].id);*/
 				$("#list").append("<li class='link'>" + list_data + "　" + json_data[i].id + "</li>");
-				pref(json_data[i].id);
+				
 			}
 	
 		}
@@ -37,7 +38,9 @@ function pref(x){
    		$.getJSON("https://linkevery2s.github.io/heatstroke/area/st.json", function(data){
         	for(var j in data){
         		if(data[j].ST_CODE.indexOf(x) != -1) {
-        			alert(x);
+        			todou[j] = data[j].REGION;
+        			return todou[j];
+
         		}
         	}
     	});
