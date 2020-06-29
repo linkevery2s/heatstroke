@@ -1,4 +1,3 @@
-jsonCallback(
 [
 	{
 		"REGION_CODE":	"01",
@@ -14314,4 +14313,3 @@ jsonCallback(
 		"LNG":	"123.7758522"
 	}
 ]
-);
