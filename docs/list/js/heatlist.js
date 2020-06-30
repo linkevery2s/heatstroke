@@ -1,5 +1,5 @@
 /* 初期定数 */
-var i; var todou;
+var i; var todou;var j_data2 = new Array(840);var js_data2 = new Array(840);
 
 function start(){
 
@@ -34,16 +34,19 @@ xhr.send(null);
 					for ( i = 0; i < 840; i++){
 						var list_data = json_data[i][js_data] / 10;
 						
-						/* 都道府県 */
-						var js_data2 = json_data2[i].REGION;
-						
-						/* 観測所 */
-						var j_data2 = json_data2[i].ST;
+						if ( json_data2[i].ST_CODE = json_data[i].id){
+							/* 都道府県 */
+							js_data2[i] = json_data2[i].AREA;
+							
+							/* 観測所 */
+							j_data2[i] = json_data2[i].ST;
+
+						}else{}
 						
 						
 						/* リストに追加 
 						pref(json_data[i].id);*/
-						$("#list").append("<li class='link'>" + list_data + " " + json_data[i].id  + " "  + js_data2  + " " + j_data2 + "</li>");
+						$("#list").append("<li class='link'>" + list_data + " " + js_data2[i] + " "  + j_data2[i]  + "</li>");
 					}
 	
 				}
