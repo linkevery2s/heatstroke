@@ -34,18 +34,16 @@ xhr.send(null);
 					for ( i = 0; i < 840; i++){
 						var list_data = json_data[i][js_data] / 10;
 						
-						/* 都道府県 
+						/* 都道府県 */
 						var js_data2 = json_data2[i].REGION;
 						
-						
-						var j_data2 = json_data2[i].ST;*/
-						
-						var test = json_data2[i].ST_CODE;
+						/* 観測所 */
+						var j_data2 = json_data2[i].ST;
 						
 						
 						/* リストに追加 
 						pref(json_data[i].id);*/
-						$("#list").append("<li class='link'>" + list_data + " " + json_data[i].id  + " " + test  + " " + js_data2  + " " + j_data2 + "</li>");
+						$("#list").append("<li class='link'>" + list_data + " " + json_data[i].id  + " "  + js_data2  + " " + j_data2 + "</li>");
 					}
 	
 				}
