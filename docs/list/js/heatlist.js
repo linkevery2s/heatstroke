@@ -18,14 +18,39 @@ xhr.send(null);
 			/* jsonファイルの中の１番目の日にち */
 			var js_data = Object.keys(json_data[0])[0];
 			
-			for ( i = 0; i < 840; i++){
-				var list_data = json_data[i][js_data] / 10;
-				/* リストに追加 
-				pref(json_data[i].id);*/
-				$("#list").append("<li class='link'>" + list_data + "　" + json_data[i].id + "</li>");
-				
-			}
+			/* 地域表示 */
+			var url2 = "https://linkevery2s.github.io/heatstroke/area/st.json";
+			
+			var xhr2 = new XMLHttpRequest();
+			xhr2.open("GET", url2);
+			xhr2.send(null);
+			
+			xhr2.onreadystatechange = function(){
+
+				if (xhr2.readyState == 4 && xhr2.status == 200){
+					
+					var json_data2 = eval('(' + xhr2.responseText + ')');
+					
+					for ( i = 0; i < 840; i++){
+						var list_data = json_data[i][js_data] / 10;
+						
+						/* 都道府県 
+						var js_data2 = json_data2[i].REGION;
+						
+						
+						var j_data2 = json_data2[i].ST;*/
+						
+						var test = json_data2[i].ST_CODE;
+						
+						
+						/* リストに追加 
+						pref(json_data[i].id);*/
+						$("#list").append("<li class='link'>" + list_data + " " + json_data[i].id  + " " + test  + " " + js_data2  + " " + j_data2 + "</li>");
+					}
 	
+				}
+			
+			}
 		}
 
 	}
