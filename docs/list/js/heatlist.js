@@ -44,9 +44,20 @@ xhr.send(null);
 						}else{}
 						
 						
-						/* リストに追加 
-						pref(json_data[i].id);*/
-						$("#list").append("<li class='link'>" + list_data + " " + js_data2[i] + " "  + j_data2[i]  + "</li>");
+						/* リストに追加 */
+
+							if (list_data > 31){
+								$("#lis").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
+							}else if (list_data > 28){
+								$("#lis").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
+							}else if (list_data > 25){
+								$("#lis").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
+							}else if (list_data > 21){
+								$("#lis").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
+							}else{
+								$("#lis").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
+							}
+						
 					}
 	
 				}
