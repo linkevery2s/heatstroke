@@ -4,8 +4,7 @@ var ido = new Array(840); var keido = new Array(840);
 
 function start(){
 
-	var map;
-	map = L.map('map');
+	var map = L.map('map', {minZoom: 5, maxZoom: 8});
 	L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://maps.gsi.go.jp/development/ichiran.html" target="_blank">地理院タイル</a>'
   	}).addTo(map);
@@ -24,7 +23,7 @@ xhr.send(null);
 			var json_data = eval('(' + xhr.responseText + ')');
 		
 			/* jsonファイルの中の１番目の日にち */
-			var js_data = Object.keys(json_data[0])[0];
+			var js_data = Object.keys(json_data[0])[2];
 			
 			/* 地域表示 */
 			var url2 = "https://linkevery2s.github.io/heatstroke/area/st.json";

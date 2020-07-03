@@ -27,7 +27,7 @@
 
 
 	</head>
-	<body class="is-preload" onLoad="get_kansen()">
+	<body class="is-preload" onLoad="heat()">
 
 		<!-- Header -->
 			<header id="header">
@@ -58,8 +58,10 @@
 						<blockquote>
 						観測地点における暑さ指数をマップに表示しています。
 						</blockquote>
-
-						<iframe src ="map/1.html" width="100%" height="500px"></iframe>
+						
+						<select name="month" id="month" onchange="select_change();">></select><br>
+						
+						<div id="heatmap"></div>
 
 					</section>
 
@@ -117,6 +119,7 @@
 								<div class="row gtr-50 gtr-uniform">
 									<div class="col-4"><a href="https://www.covid19-yamanaka.com/" target="_blank"><span class="image fit"><img src="images/thumbs/yamanaka.png" alt="" />山中伸弥による新型コロナウイルス情報発信 <i class="fas fa-external-link-alt"></i></span></a></div>
 									<div class="col-4"><a href="https://www.stopcovid19.jp/" target="_blank"><span class="image fit"><img src="images/thumbs/covid-19j.png" alt="" />新型コロナウイルス対策ダッシュボード <i class="fas fa-external-link-alt"></i></span></a></div>
+									<div class="col-4"><a href="https://www.wbgt.env.go.jp/" target="_blank"><span class="image fit"><img src="images/thumbs/kankyo.png" alt="" />環境省 熱中症予防情報サイト <i class="fas fa-external-link-alt"></i></span></a></div>
 								</div>
 								
 							</div>
@@ -126,7 +129,7 @@
 							<h3 class="ti">参考文献</h3>
 									<ul>
 										<li><a href="https://linkevery2s.github.io/bsinsight/index.html" target="_blank">防災INSIGHT <i class="fas fa-external-link-alt"></i></a></li>
-										<li><a href="https://www.mhlw.go.jp/stf/houdou/index.html" target="_blank">厚生労働省 報道発表資料 <i class="fas fa-external-link-alt"></i></a></li>
+										
 									</ul>
 							</div>
 								<div class="col-6 col-12-xsmall">
@@ -163,6 +166,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/heat.js"></script>
 
 	</body>
 </html>
