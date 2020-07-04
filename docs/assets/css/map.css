@@ -87,7 +87,7 @@ h3.ti::before {
 }
 
 #upr{
-  height: 60px;
+  height: 70px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   background: #FFFFCC;
