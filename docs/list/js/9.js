@@ -41,13 +41,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis1").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis1").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis1").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis1").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis1").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -65,13 +65,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis2").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis2").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis2").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis2").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis2").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -89,13 +89,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis3").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis3").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis3").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis3").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis3").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -113,13 +113,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis4").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis4").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis4").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis4").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis4").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -137,13 +137,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis5").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis5").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis5").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis5").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis5").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -161,13 +161,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis6").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis6").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis6").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis6").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis6").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -185,13 +185,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis7").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis7").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis7").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis7").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis7").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -209,13 +209,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis8").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis8").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis8").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis8").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis8").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -233,13 +233,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis9").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis9").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis9").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis9").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis9").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -257,13 +257,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis10").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis10").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis10").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis10").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis10").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -281,13 +281,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis11").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis11").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis11").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis11").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis11").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -305,13 +305,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis12").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis12").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis12").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis12").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis12").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -329,13 +329,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis13").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis13").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis13").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis13").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis13").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -353,13 +353,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis14").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis14").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis14").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis14").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis14").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -377,13 +377,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis15").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis15").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis15").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis15").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis15").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -401,13 +401,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis16").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis16").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis16").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis16").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis16").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -425,13 +425,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis17").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis17").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis17").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis17").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis17").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -449,13 +449,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis18").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis18").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis18").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis18").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis18").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -473,13 +473,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis19").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis19").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis19").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis19").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis19").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -497,13 +497,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis20").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis20").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis20").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis20").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis20").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -521,13 +521,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis21").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis21").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis21").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis21").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis21").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -545,13 +545,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis22").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis22").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis22").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis22").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis22").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -569,13 +569,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis23").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis23").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis23").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis23").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis23").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -593,13 +593,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis24").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis24").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis24").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis24").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis24").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -617,13 +617,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis25").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis25").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis25").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis25").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis25").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -641,13 +641,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis26").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis26").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis26").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis26").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis26").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -665,13 +665,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis27").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis27").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis27").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis27").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis27").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -689,13 +689,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis28").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis28").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis28").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis28").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis28").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -713,13 +713,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis29").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis29").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis29").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis29").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis29").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -737,13 +737,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis30").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis30").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis30").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis30").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis30").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -761,13 +761,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis31").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis31").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis31").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis31").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis31").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -785,13 +785,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis32").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis32").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis32").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis32").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis32").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -809,13 +809,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis33").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis33").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis33").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis33").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis33").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -833,13 +833,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis34").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis34").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis34").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis34").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis34").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -857,13 +857,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis35").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis35").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis35").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis35").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis35").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -881,13 +881,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis36").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis36").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis36").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis36").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis36").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -905,13 +905,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis37").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis37").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis37").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis37").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis37").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -929,13 +929,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis38").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis38").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis38").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis38").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis38").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -953,13 +953,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis39").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis39").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis39").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis39").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis39").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -977,13 +977,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis40").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis40").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis40").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis40").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis40").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -1001,13 +1001,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis41").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis41").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis41").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis41").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis41").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -1025,13 +1025,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis42").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis42").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis42").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis42").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis42").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -1049,13 +1049,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis43").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis43").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis43").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis43").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis43").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -1073,13 +1073,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis44").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis44").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis44").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis44").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis44").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -1097,13 +1097,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis45").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis45").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis45").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis45").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis45").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -1121,13 +1121,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis46").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis46").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis46").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis46").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis46").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
@@ -1145,13 +1145,13 @@ xhr.send(null);
 						}else{}
 
 						/* リストに追加 */
-							if (list_data > 31){
+							if (list_data > 30){
 								$("#lis47").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 28){
+							}else if (list_data > 27){
 								$("#lis47").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 25){
+							}else if (list_data > 24){
 								$("#lis47").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
-							}else if (list_data > 21){
+							}else if (list_data > 20){
 								$("#lis47").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}else{
 								$("#lis47").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");

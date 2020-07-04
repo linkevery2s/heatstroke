@@ -87,7 +87,7 @@ h3.ti::before {
 }
 
 #upr{
-  height: 120px;
+  height: 60px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   background: #FFFFCC;
@@ -125,4 +125,12 @@ color: #fff;
 
 .fb_iframe_widget > span {
 	vertical-align: baseline !important;
+}
+
+#color_b{
+  height: 200px;
+  margin-top: 5px;
+  padding: 0.5em;
+  border: solid 3px #FFC0CB;
+  border-radius: 10px;
 }
