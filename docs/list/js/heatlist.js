@@ -31,7 +31,7 @@ xhr.send(null);
 					
 					var json_data2 = eval('(' + xhr2.responseText + ')');
 					
-					for ( i = 0; i < 840; i++){
+					for ( i = 0; i < 162; i++){
 						var list_data = json_data[i][js_data] / 10;
 						
 						if ( json_data2[i].ST_CODE = json_data[i].id){
@@ -58,7 +58,37 @@ xhr.send(null);
 								$("#lis").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}
 						
-					}
+					}/* for */
+
+					for ( i = 163; i < 184; i++){
+						var list_data = json_data[i][js_data] / 10;
+						
+						if ( json_data2[i].ST_CODE = json_data[i].id){
+							/* 都道府県 */
+							js_data2[i] = json_data2[i].AREA;
+							
+							/* 観測所 */
+							j_data2[i] = json_data2[i].ST;
+
+						}else{}
+						
+						
+						/* リストに追加 */
+
+							if (list_data > 31){
+								$("#lis2").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
+							}else if (list_data > 28){
+								$("#lis2").append("<li id = 'li_color2' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
+							}else if (list_data > 25){
+								$("#lis2").append("<li id = 'li_color3' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
+							}else if (list_data > 21){
+								$("#lis2").append("<li id = 'li_color4' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
+							}else{
+								$("#lis2").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
+							}
+						
+					}/* for */
+
 	
 				}
 			
@@ -69,18 +99,8 @@ xhr.send(null);
 
 }/*start*/
 
-function pref(x){
+function search(){
 
-	$(document).ready(function () {
-   		$.getJSON("https://linkevery2s.github.io/heatstroke/area/st.json", function(data){
-        	for(var j in data){
-        		if(data[j].ST_CODE.indexOf(x) != -1) {
-        			todou[j] = data[j].REGION;
-        			return todou[j];
-
-        		}
-        	}
-    	});
-	});
+$('#keyword').quicksearch('#pref #todou');
 
 }

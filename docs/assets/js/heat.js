@@ -25,11 +25,11 @@ xhr.send(null);
 			var json_data = eval('(' + xhr.responseText + ')');
 		
 			/* 日にち格納 */
-			let month = document.getElementById('month');
+			var month = document.getElementById('month');
 			document.createElement('option')
 			for (var i = 0; i < 10; i++){
 				day[i] = Object.keys(json_data[0])[i];
-				let option = document.createElement('option');
+				var option = document.createElement('option');
 				option.setAttribute('value', i);
 				option.innerHTML = day[i].slice(0, 4) + "年" + day[i].slice(4, -4) + "月" + day[i].slice(6, -2) + "日　" +  day[i].slice(-2) + "時";
 				month.appendChild(option);
