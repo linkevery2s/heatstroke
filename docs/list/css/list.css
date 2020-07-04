@@ -52,6 +52,52 @@ ul,li{
 	border-radius: 5px;
 	padding: 5px 0 5px 0;
 	color: #ffffff;
-	background: #0033CC;
+	background: #7F7F7F;
 	cursor: pointer;
+}
+
+#todou{
+
+	padding-top: 10px;
+	border-top: double 5px #008800;
+}
+
+.list{
+
+	margin-top: 10px;
+	border-top: double 5px #008800;
+
+}
+
+#prefe{
+
+	padding-left: 10px;
+	
+}
+
+#prefe:before {
+
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f558　";
+  color: #008800;
+  
+}
+
+#header{
+	margin: 0; padding: 0;
+	width: 100%;
+	position:fixed;
+	height:110px;
+	margin:0;
+	padding:0;
+	background: #ffffff;
+	z-index:10;
+}
+
+#main{
+	margin: 0; padding: 0;
+	width: 100%;
+	padding: 110px 0 0 0;
+	z-index: 1;
 }
