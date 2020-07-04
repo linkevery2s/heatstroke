@@ -95,3 +95,34 @@ h3.ti::before {
   border: solid 3px #FFCC66;
   border-radius: 10px;
 }
+
+h3.point{
+position: relative;
+color: #ffffff;
+padding-left: 35px;
+line-height: 1.4;
+background-color: #08088A;
+padding-top: .5em;
+padding-bottom: .5em;
+border-top: 2px solid #F7FE2E;
+border-bottom: 2px solid #F7FE2E;
+}
+h3.point:before{ font-family: "Font Awesome 5 Free";
+font-weight: 900;
+content: "\f1b3";
+position: absolute;
+padding-top: .5em;
+font-size: 1em;
+left: 5px;
+top: 0;
+color: #fff;
+}
+
+.day_s{
+	width: 100%;
+	text-align: right;
+}
+
+.fb_iframe_widget > span {
+	vertical-align: baseline !important;
+}

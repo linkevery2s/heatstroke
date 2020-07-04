@@ -48,6 +48,10 @@ xhr.send(null);
 				option2.innerHTML = day[i].slice(0, 4) + "年" + day[i].slice(4, -4) + "月" + day[i].slice(6, -2) + "日　" +  day[i].slice(-2) + "時";
 				month2.appendChild(option2);
 			}
+			
+			/* 最終更新日時 */
+			document.getElementById('day_s').innerHTML = "最終更新日時：" + json_data[0].dt;
+			document.getElementById('day_s2').innerHTML = "最終更新日時：" + json_data[0].dt;
 
 		}
 	}
