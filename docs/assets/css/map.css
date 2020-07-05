@@ -104,8 +104,8 @@ line-height: 1.4;
 background-color: #08088A;
 padding-top: .5em;
 padding-bottom: .5em;
-border-top: 2px solid #F7FE2E;
-border-bottom: 2px solid #F7FE2E;
+border-top: 3px solid #00FFFF;
+border-bottom: 3px solid #00FFFF;
 }
 h3.point:before{ font-family: "Font Awesome 5 Free";
 font-weight: 900;
