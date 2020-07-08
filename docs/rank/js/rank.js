@@ -1,6 +1,6 @@
 /* 初期定数 */
 var i; var j; var todou;var j_data2 = new Array(840);var js_data = new Array(840); var js_data2 = new Array(840);
-var count; var rank = new Array(840,840);
+var count; var rank = new Array(840,840,840);var list_data = new Array(840);
 
 function start(){
 
@@ -23,6 +23,7 @@ xhr.send(null);
 			/* 配列の個数をカウント */
 			count = json_data.length;
 			
+			/* 最も直近の時間を取得 */
 			for (j = count-1 ; j >=0 ;  j--){
 				
 				var coun = Object.keys(json_data[j])[0];
@@ -34,16 +35,8 @@ xhr.send(null);
 				
 			}
 			
-			alert(json_data[j][coun]);
-			
-			for (var x = 0; x < 840; x++){
-				rank[x]= js_data[x];
-				for ( var y = 0; y < 840; y++){
-				rank[x][y]= json_data[j][Object.keys(json_data[j])[y]];
-				}
-			}
-			
-			alert(rank[0][2]);
+			/* 日時表示 */
+			document.getElementById('day_s').innerHTML = json_data[j].Date + " " + json_data[j].Time +"現在";
 
 			
 			/* 地域表示 */
@@ -59,23 +52,31 @@ xhr.send(null);
 					
 					var json_data2 = eval('(' + xhr2.responseText + ')');
 					
-					for ( i = 0; i < 50; i++){
-						var list_data = json_data[i][js_data];
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+					for ( i = 0; i < 840; i++){
+						list_data[i] = json_data[j][js_data[i]];
+						if ( json_data2[i].ST_CODE = js_data[i]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
 							j_data2[i] = json_data2[i].ST;
 						}else{}
 
-						/* リストに追加 */
-								$("#todou").append("<li id = 'li_color1' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：<span id='rank_color'>" + list_data + "℃</span></li>");
+						rank[i] = [[js_data2[i] + " " +j_data2[i]], [list_data[i]]];
 
 					}/* for */
 
+					/* 並び替え */
+					rank.sort(function(a,b){return(b[1] - a[1]);});
 
+					for (i = 0; i < 50; i++){
+					
+						/* リストに追加 */
+								$("#todou").append("<li id = 'li_color1' class='link'>" + rank[i][0] + "<br>暑さ指数：<span id='rank_color'>" + rank[i][1] + "℃</span></li>");
+					
+					}
 
 				}
+				
 			
 			}
 		}
