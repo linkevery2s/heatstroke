@@ -1,14 +1,17 @@
 /* 初期定数 */
 var i; var todou;var j_data2 = new Array(840);var js_data2 = new Array(840);
-var ido = new Array(840); var keido = new Array(840);
+var ido = new Array(840); var keido = new Array(840);var map;
 
 function start(){
 
-	var map = L.map('map', {minZoom: 5, maxZoom: 8});
+	map = L.map('map', {minZoom: 5, maxZoom: 8});
 	L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://maps.gsi.go.jp/development/ichiran.html" target="_blank">地理院タイル</a>'
   	}).addTo(map);
   	map.setView([37.40, 136], 5);
+  	L.control.zoom({position: 'topright'}).addTo(map);
+	var gps_button = L.easyButton('fa-location-arrow', function(){ GPS();}, {position: 'topright'}).addTo( map );
+
 
 var url = "https://code4sabae.github.io/wbgt-japan/data/prev15WG/latest.json";
 
