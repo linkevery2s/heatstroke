@@ -4,7 +4,7 @@ var ido = new Array(840); var keido = new Array(840);var map;
 
 function start(){
 
-	map = L.map('map', {minZoom: 5, maxZoom: 8});
+	map = L.map('map', {minZoom: 5, maxZoom: 8, zoomControl: false});
 	L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://maps.gsi.go.jp/development/ichiran.html" target="_blank">地理院タイル</a>'
   	}).addTo(map);
