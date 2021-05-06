@@ -123,10 +123,6 @@ color: #fff;
 	text-align: right;
 }
 
-.fb_iframe_widget > span {
-	vertical-align: baseline !important;
-}
-
 #color_b{
   margin-top: 5px;
   padding: 0.5em;
