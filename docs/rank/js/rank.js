@@ -4,7 +4,19 @@ var count; var rank = new Array(840,840,840);var list_data = new Array(840);
 
 function start(){
 
-var url = "https://code4sabae.github.io/wbgt-japan/data/est15WG/202010.json";
+var d = new Date();
+
+var month = d.getMonth() + 1;
+
+if(month == "10"){
+	
+}else{
+
+	month = "0" + month;
+
+}
+
+var url = "https://code4sabae.github.io/wbgt-japan/data/est15WG/2021" + month + ".json";
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url);
