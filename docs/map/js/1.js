@@ -64,15 +64,15 @@ xhr.send(null);
 						/* リストに追加 */
 
 							if (list_data > 30){
-								L.marker([ido[i], keido[i]],{icon: L.divIcon({className: 'marker1'})}).addTo(map).bindPopup(js_data2[i] + " " + j_data2[i] + "<br>" + list_data + "℃");
+								L.marker([ido[i], keido[i]],{icon: L.divIcon({className: 'marker1'})}).addTo(map);
 							}else if (list_data > 27){
-								L.marker([ido[i], keido[i]],{icon: L.divIcon({className: 'marker2'})}).addTo(map).bindPopup(js_data2[i] + " " + j_data2[i] + "<br>" + list_data + "℃");
+								L.marker([ido[i], keido[i]],{icon: L.divIcon({className: 'marker2'})}).addTo(map);
 							}else if (list_data > 24){
-								L.marker([ido[i], keido[i]],{icon: L.divIcon({className: 'marker3'})}).addTo(map).bindPopup(js_data2[i] + " " + j_data2[i] + "<br>" + list_data + "℃");
+								L.marker([ido[i], keido[i]],{icon: L.divIcon({className: 'marker3'})}).addTo(map);
 							}else if (list_data > 20){
-								L.marker([ido[i], keido[i]],{icon: L.divIcon({className: 'marker4'})}).addTo(map).bindPopup(js_data2[i] + " " + j_data2[i] + "<br>" + list_data + "℃");
+								L.marker([ido[i], keido[i]],{icon: L.divIcon({className: 'marker4'})}).addTo(map);
 							}else{
-								L.marker([ido[i], keido[i]],{icon: L.divIcon({className: 'marker5'})}).addTo(map).bindPopup(js_data2[i] + " " + j_data2[i] + "<br>" + list_data + "℃");
+								L.marker([ido[i], keido[i]],{icon: L.divIcon({className: 'marker5'})}).addTo(map);
 							}
 
 					}
