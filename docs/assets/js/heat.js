@@ -15,7 +15,7 @@ function heat(){
 
 function option_ini(){
 
-var url = "https://code4sabae.github.io/wbgt-japan/data/prev15WG/latest.json";
+var url = "https://sheets.googleapis.com/v4/spreadsheets/1aJ2bayRusxfwCmtL5ioGwxfiOOEX4RK7Snyhr1c22DM/values/test?key=AIzaSyCbg_30AROG_YdQ2lMMgOPzSsy6PC7Gcx4";
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url);
@@ -26,12 +26,13 @@ xhr.send(null);
 		if (xhr.readyState == 4 && xhr.status == 200){
 			/* jsonを配列に格納 */
 			var json_data = eval('(' + xhr.responseText + ')');
-		
+			console.log(json_data.values[0][2]);
+
 			/* 日にち格納map */
 			var month = document.getElementById('month');
 			document.createElement('option')
-			for (var i = 0; i < 10; i++){
-				day[i] = Object.keys(json_data[0])[i];
+			for (var i = 2; i < 12; i++){
+				day[i] = json_data.values[0][i];
 				var option = document.createElement('option');
 				option.setAttribute('value', i);
 				option.innerHTML = day[i].slice(0, 4) + "年" + day[i].slice(4, -4) + "月" + day[i].slice(6, -2) + "日　" +  day[i].slice(-2) + "時";
@@ -41,17 +42,17 @@ xhr.send(null);
 			/* 日にち格納list */
 			var month2 = document.getElementById('month2');
 			document.createElement('option')
-			for (var i = 0; i < 10; i++){
-				day[i] = Object.keys(json_data[0])[i];
+			for (var i = 2; i < 12; i++){
+				day[i] = json_data.values[0][i];
 				var option2 = document.createElement('option');
 				option2.setAttribute('value', i);
 				option2.innerHTML = day[i].slice(0, 4) + "年" + day[i].slice(4, -4) + "月" + day[i].slice(6, -2) + "日　" +  day[i].slice(-2) + "時";
 				month2.appendChild(option2);
 			}
-			
+
 			/* 最終更新日時 */
-			document.getElementById('day_s').innerHTML = "最終更新日時：" + json_data[0].dt;
-			document.getElementById('day_s2').innerHTML = "最終更新日時：" + json_data[0].dt;
+			document.getElementById('day_s').innerHTML = "最終更新日時：" + json_data.values[1][1];
+			document.getElementById('day_s2').innerHTML = "最終更新日時：" + json_data.values[1][1];
 
 		}
 	}
@@ -63,7 +64,7 @@ function select_change(){
 
 	var selindex = document.getElementById('month').selectedIndex;
 	var target = document.getElementById('heatmap');
-	
+
     switch (selindex) {
       case 0:
         target.innerHTML = '<iframe src ="map/1.html" id = "map_frame" width="100%" height="500px"></iframe>';
@@ -104,7 +105,7 @@ function select_change2(){
 
 	var selindex = document.getElementById('month2').selectedIndex;
 	var target = document.getElementById('heatlist');
-	
+
     switch (selindex) {
       case 0:
         target.innerHTML = '<iframe src ="list/1.html" id = "map_frame" width="100%" height="500px"></iframe>';

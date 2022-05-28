@@ -3,7 +3,7 @@ var i; var todou;var j_data2 = new Array(840);var js_data2 = new Array(840);
 
 function start(){
 
-var url = "https://code4sabae.github.io/wbgt-japan/data/prev15WG/latest.json";
+var url = "https://sheets.googleapis.com/v4/spreadsheets/1aJ2bayRusxfwCmtL5ioGwxfiOOEX4RK7Snyhr1c22DM/values/test?key=AIzaSyCbg_30AROG_YdQ2lMMgOPzSsy6PC7Gcx4";
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url);
@@ -14,26 +14,26 @@ xhr.send(null);
 		if (xhr.readyState == 4 && xhr.status == 200){
 			/* jsonを配列に格納 */
 			var json_data = eval('(' + xhr.responseText + ')');
-		
+
 			/* jsonファイルの中の１番目の日にち */
-			var js_data = Object.keys(json_data[0])[8];
-			
+			var js_data = 10;
+
 			/* 地域表示 */
 			var url2 = "https://linkevery2s.github.io/heatstroke/area/st.json";
-			
+
 			var xhr2 = new XMLHttpRequest();
 			xhr2.open("GET", url2);
 			xhr2.send(null);
-			
+
 			xhr2.onreadystatechange = function(){
 
 				if (xhr2.readyState == 4 && xhr2.status == 200){
-					
+
 					var json_data2 = eval('(' + xhr2.responseText + ')');
-					
+
 					for ( i = 0; i < 162; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -52,12 +52,12 @@ xhr.send(null);
 							}else{
 								$("#lis1").append("<li id = 'li_color5' class='link'>" + js_data2[i] + " "  + j_data2[i] + "<br>暑さ指数：" + list_data + "℃</li>");
 							}
-						
+
 					}/* for */
 
 					for ( i = 162; i < 184; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -80,8 +80,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 184; i < 208; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -104,8 +104,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 208; i < 241; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -128,8 +128,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 241; i < 259; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -152,8 +152,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 259; i < 279; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -176,8 +176,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 279; i < 308; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -200,8 +200,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 308; i < 322; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -224,8 +224,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 322; i < 336; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -248,8 +248,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 336; i < 349; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -272,8 +272,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 349; i < 357; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -296,8 +296,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 357; i < 369; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -320,8 +320,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 369; i < 383; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -344,8 +344,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 383; i < 388; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -368,8 +368,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 388; i < 416; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -392,8 +392,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 416; i < 426; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -416,8 +416,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 426; i < 443; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -440,8 +440,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 443; i < 454; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -464,8 +464,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 454; i < 477; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -488,8 +488,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 477; i < 489; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -512,8 +512,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 489; i < 516; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -536,8 +536,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 516; i < 525; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -560,8 +560,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 525; i < 535; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -584,8 +584,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 535; i < 544; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -608,8 +608,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 544; i < 553; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -632,8 +632,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 553; i < 561; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -656,8 +656,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 561; i < 567; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -680,8 +680,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 567; i < 586; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -704,8 +704,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 586; i < 592; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -728,8 +728,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 592; i < 603; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -752,8 +752,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 603; i < 618; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -776,8 +776,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 618; i < 636; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -800,8 +800,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 636; i < 652; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -824,8 +824,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 652; i < 661; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -848,8 +848,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 661; i < 676; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -872,8 +872,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 676; i < 684; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -896,8 +896,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 684; i < 690; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -920,8 +920,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 690; i < 704; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -944,8 +944,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 704; i < 719; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -968,8 +968,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 719; i < 731; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -992,8 +992,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 731; i < 745; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -1016,8 +1016,8 @@ xhr.send(null);
 					}/* for */
 
 					for ( i = 745; i < 759; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][js_data] / 10;
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -1040,8 +1040,8 @@ xhr.send(null);
 					}/* for */
 
 				for ( i = 759; i < 764; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+					var list_data = json_data.values[i+1][js_data] / 10;
+					if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -1064,8 +1064,8 @@ xhr.send(null);
 					}/* for */
 
 				for ( i = 764; i < 781; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+					var list_data = json_data.values[i+1][js_data] / 10;
+					if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -1088,8 +1088,8 @@ xhr.send(null);
 					}/* for */
 
 				for ( i = 781; i < 797; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+					var list_data = json_data.values[i+1][js_data] / 10;
+					if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -1112,8 +1112,8 @@ xhr.send(null);
 					}/* for */
 
 				for ( i = 797; i < 824; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+					var list_data = json_data.values[i+1][js_data] / 10;
+					if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -1136,8 +1136,8 @@ xhr.send(null);
 					}/* for */
 
 				for ( i = 824; i < 840; i++){
-						var list_data = json_data[i][js_data] / 10;
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+					var list_data = json_data.values[i+1][js_data] / 10;
+					if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
 							/* 観測所 */
@@ -1160,7 +1160,7 @@ xhr.send(null);
 					}/* for */
 
 				}
-			
+
 			}
 		}
 

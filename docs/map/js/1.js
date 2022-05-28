@@ -12,7 +12,7 @@ function start(){
 	L.control.zoom({position: 'topright'}).addTo(map);
 	var gps_button = L.easyButton('fa-location-arrow', function(){ GPS();}, {position: 'topright'}).addTo( map );
 
-var url = "https://code4sabae.github.io/wbgt-japan/data/prev15WG/latest.json";
+var url = "https://sheets.googleapis.com/v4/spreadsheets/1aJ2bayRusxfwCmtL5ioGwxfiOOEX4RK7Snyhr1c22DM/values/test?key=AIzaSyCbg_30AROG_YdQ2lMMgOPzSsy6PC7Gcx4";
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url);
@@ -23,42 +23,44 @@ xhr.send(null);
 		if (xhr.readyState == 4 && xhr.status == 200){
 			/* jsonを配列に格納 */
 			var json_data = eval('(' + xhr.responseText + ')');
-		
+
 			/* jsonファイルの中の１番目の日にち */
-			var js_data = Object.keys(json_data[0])[0];
-			
+			var js_data = json_data.values[0][2];
+			console.log(js_data);
+
 			/* 地域表示 */
 			var url2 = "https://linkevery2s.github.io/heatstroke/area/st.json";
-			
+
 			var xhr2 = new XMLHttpRequest();
 			xhr2.open("GET", url2);
 			xhr2.send(null);
-			
+
 			xhr2.onreadystatechange = function(){
 
 				if (xhr2.readyState == 4 && xhr2.status == 200){
-					
+
 					var json_data2 = eval('(' + xhr2.responseText + ')');
-					
+
 					for ( i = 0; i < 840; i++){
-						var list_data = json_data[i][js_data] / 10;
-						
-						if ( json_data2[i].ST_CODE = json_data[i].id){
+						var list_data = json_data.values[i+1][2] / 10;
+						console.log(list_data);
+
+						if ( json_data2[i].ST_CODE = json_data.values[i+1][0]){
 
 							/* 都道府県 */
 							js_data2[i] = json_data2[i].AREA;
-							
+
 							/* 観測所 */
 							j_data2[i] = json_data2[i].ST;
-							
+
 							/* 緯度、経度 */
 							ido[i] = json_data2[i].LAT;
-							
+
 							keido[i] = json_data2[i].LNG;
-							
+
 
 						}else{}
-						
+
 						/* リストに追加 */
 
 							if (list_data > 30){
@@ -72,11 +74,11 @@ xhr.send(null);
 							}else{
 								L.marker([ido[i], keido[i]],{icon: L.divIcon({className: 'marker5'})}).addTo(map);
 							}
-						
+
 					}
-	
+
 				}
-			
+
 			}
 		}
 
