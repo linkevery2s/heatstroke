@@ -71,19 +71,29 @@
 			padding: 10px;
 		}
 
+		iframe {
+			margin: 0;
+			padding: 0;
+			border: none;
+			top: 50%;
+			left: 50%;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+			height: 100%;
+			width: 100%;
+
+		}
+
 	</style>
 	<script type="module">
 
 		onload = async () => {
 
-			const map = L.map('map').setView([35.6, 137], 8);
-
-			const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-				maxZoom: 19,
-				attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | &copy; 仁志, <a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">CC BY 4.0</a>'
-			}).addTo(map);
+			map.innerHTML = '<iframe src="map/1.html"></iframe>';
 
 		}
+
 	</script>
 
 	<title>暑さ指数可視化マップ</title>
@@ -93,15 +103,16 @@
 
 	<div id="menu" class="fixed top-0 mt-4 left-1/2 -translate-x-1/2">
 
-<select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-  <option selected>Choose a country</option>
-  <option value="US">United States</option>
-  <option value="CA">Canada</option>
-  <option value="FR">France</option>
-  <option value="DE">Germany</option>
-</select>
+		<select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+			<option selected>Choose a country</option>
+			<option value="US">United States</option>
+			<option value="CA">Canada</option>
+			<option value="FR">France</option>
+			<option value="DE">Germany</option>
+		</select>
 
 	</div>
+
 	<div id="map"></div>
 
 	<a href="javascript:void(0)" onClick="display()"><div id="navigation_menu" class="bg-gray-500 hover:bg-gray-300 py-2 px-3 bg-opacity-50 text-white top-0 right-0 mt-4 mr-4"></div></a>
