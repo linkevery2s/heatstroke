@@ -92,6 +92,67 @@
 
 			map.innerHTML = '<iframe src="map/1.html"></iframe>';
 
+				/* fetchで取得 */
+			const res = await fetch("https://raw.githubusercontent.com/linkevery2s/heatstroke/master/docs/data/all.json");
+			const data = await res.json();
+
+			console.log(data[0][2]);
+
+			console.log(data[0][2].slice(0, 4) + "年" + data[0][2].slice(4, -4) + "月" + data[0][2].slice(6, -2) + "日　" +  data[0][2].slice(-2) + "時");
+
+			let day = new Array(10);
+			let month = document.getElementById('month');
+
+			for (let i = 2; i < 12; i++){
+				day[i] = data[0][i];
+
+				let option = document.createElement('option');
+				option.setAttribute('value', i - 2);
+				option.innerHTML = day[i].slice(0, 4) + "年" + day[i].slice(4, -4) + "月" + day[i].slice(6, -2) + "日 " +  day[i].slice(-2) + "時";
+				month.appendChild(option);
+			}
+
+		}
+
+		/* リストボックスが変わった時 */
+		window.select_change = () => {
+
+			let selindex = document.getElementById('month').selectedIndex;
+			let target = document.getElementById('map');
+
+			switch (selindex) {
+			case 0:
+				target.innerHTML = '<iframe src ="map/1.html"></iframe>';
+				break;
+			case 1:
+				target.innerHTML = '<iframe src ="map/2.html"></iframe>';
+				break;
+			case 2:
+				target.innerHTML = '<iframe src ="map/3.html"></iframe>';
+				break;
+			case 3:
+				target.innerHTML = '<iframe src ="map/4.html"></iframe>';
+				break;
+			case 4:
+				target.innerHTML = '<iframe src ="map/5.html"></iframe>';
+				break;
+			case 5:
+				target.innerHTML = '<iframe src ="map/6.html"></iframe>';
+				break;
+			case 6:
+				target.innerHTML = '<iframe src ="map/7.html"></iframe>';
+				break;
+			case 7:
+				target.innerHTML = '<iframe src ="map/8.html"></iframe>';
+				break;
+			case 8:
+				target.innerHTML = '<iframe src ="map/9.html"></iframe>';
+				break;
+			case 9:
+				target.innerHTML = '<iframe src ="map/10.html"></iframe>';
+				break;
+			}
+
 		}
 
 	</script>
@@ -103,12 +164,7 @@
 
 	<div id="menu" class="fixed top-0 mt-4 left-1/2 -translate-x-1/2">
 
-		<select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-			<option selected>Choose a country</option>
-			<option value="US">United States</option>
-			<option value="CA">Canada</option>
-			<option value="FR">France</option>
-			<option value="DE">Germany</option>
+		<select name="month" id="month"  onchange="select_change();" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">	
 		</select>
 
 	</div>

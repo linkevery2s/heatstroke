@@ -14,8 +14,8 @@ html{
 	height: 15px !important;
 	margin: -10px !important;
 	border-radius: 100%;
-	border: 3px solid #fdfdfd;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.8);
+	border: 2px solid #fdfdfd;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.8);
 	background-color: #FF0000;
 	z-index: 20 !important;
 }
@@ -25,8 +25,8 @@ html{
 	height: 15px !important;
 	margin: -10px !important;
 	border-radius: 100%;
-	border: 3px solid #fdfdfd;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.8);
+	border: 2px solid #fdfdfd;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.8);
 	background-color: #ffa500;
 	z-index: 20 !important;
 }
@@ -36,8 +36,8 @@ html{
 	height: 15px !important;
 	margin: -10px !important;
 	border-radius: 100%;
-	border: 3px solid #fdfdfd;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.8);
+	border: 2px solid #fdfdfd;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.8);
 	background-color: #ffff00;
 	z-index: 20 !important;
 }
@@ -47,8 +47,8 @@ html{
 	height: 15px !important;
 	margin: -10px !important;
 	border-radius: 100%;
-	border: 3px solid #fdfdfd;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.8);
+	border: 2px solid #fdfdfd;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.8);
 	background-color: #00ffff;
 	z-index: 20 !important;
 }
@@ -58,8 +58,8 @@ html{
 	height: 15px !important;
 	margin: -10px !important;
 	border-radius: 100%;
-	border: 3px solid #fdfdfd;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.8);
+	border: 2px solid #fdfdfd;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.8);
 	background-color: #0000ff;
 	z-index: 20 !important;
 }
