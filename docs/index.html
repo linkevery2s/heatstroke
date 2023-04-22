@@ -1,247 +1,126 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html lang="ja">
-	<head>
-		<title>防災INSIGHT 熱中症動態</title>
-  	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-  	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="熱中症の危険度をマップとリストで可視化しました。">
-	<meta property="og:title" content="防災INSIGHT 熱中症動態" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://linkevery2s.github.io/heatstroke/index.html" />
-    <meta property="og:image" content="https://linkevery2s.github.io/heatstroke/images/top.jpg" />
-    <meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="防災INSIGHT 熱中症動態" />
-	<meta name="twitter:description" content="熱中症の危険度をマップとリストで可視化しました。" />
-	<meta name="twitter:image" content="https://linkevery2s.github.io/heatstroke/images/top.jpg" />
-    <meta name="author" content="仁志">
-	<link rel="stylesheet" href="assets/css/map.css" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="apple-touch-icon" href="https://linkevery2s.github.io/heatstroke/images/apple-touch-icon.jpg">
-    <link rel="shortcut icon" href="https://linkevery2s.github.io/heatstroke/images/apple-touch-icon.jpg">
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+	<meta charset='UTF-8' name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
 
+	<!-- leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+	<!-- modal window -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linkevery2s/sourcecode/modal_window/main.css">
+	<script src="https://cdn.jsdelivr.net/gh/linkevery2s/sourcecode/modal_window/main.js"></script>
 
-	</head>
-	<body class="is-preload" onLoad="heat()">
+	<!-- tailwind -->
+	<script src="https://cdn.tailwindcss.com"></script>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<h1><strong>防災INSIGHT 熱中症動態</strong></h1>
-					<p>熱中症の危険度をマップとリストで可視化しました。</p>
-				</div>
-			</header>
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+	<style>
+		body,#map{
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			z-index: 0;
+		}
 
+		html{
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+			background: #000;
+		}
 
-		<!-- Main -->
-			<div id="main">
+/*		#footer{
+			height: 25px;
+			background: #000;
+			width: 100%;
+			color: #fff;
+			padding: 0;
+			margin: 0;
+		}
 
-					<section id="intro"><span id ="1"></span>
+		#footer a{
+			border-bottom: 1px dotted #fff;
+		}
+*/
 
-						<div id="upr">
-						☆更新履歴☆<br>
-						2022.10. 1 2022年配信終了！<br>
-						2022. 5.28 2022年配信開始！<br>
-						2021. 5. 8 2021年配信開始！<br>
-						2020. 8.20 GPS機能追加<br>
-						2020. 7.20 配信開始<br>
-						2020. 7. 9 暑さランキング追加<br>
-						2020. 7. 5 本アプリ公開
-						</div>
+		#navigation_menu{
+			position: fixed;
+			z-index: 20;
 
-					</section>
+		}
 
-					<section id="atusamap">
+		#menu{
+			z-index: 20;
+		}
 
-						<h2>暑さ指数マップ</h2>
-						<div class = "day_s" id="day_s"></div>
-						<blockquote>
-						観測地点における暑さ指数をマップに表示しています。<br>
-						</blockquote>
+		#navigation_menu:before {
+			font-family: 'Font Awesome 5 Free';
+			content: "\f0c9";
+			font-weight: 900;
+			font-size: 1em;
+			cursor: pointer;
+		}
 
-						<select name="month" id="month" onchange="select_change();">></select><br>
+		.modal_content{
+			background: #ffffff;
+			padding: 10px;
+		}
 
-						<div id="heatmap"></div>
+	</style>
+	<script type="module">
 
-					</section>
+		onload = async () => {
 
-					<section id="atusalist">
-						<h2>暑さ指数リスト</h2>
-						<div class = "day_s" id="day_s2"></div>
-						<blockquote>
-						観測地点における暑さ指数をリストに表示しています。
-						</blockquote>
+			const map = L.map('map').setView([35.6, 137], 8);
 
-						<select name="month" id="month2" onchange="select_change2();">></select><br>
+			const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				maxZoom: 19,
+				attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | &copy; 仁志, <a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">CC BY 4.0</a>'
+			}).addTo(map);
 
-						<div id="heatlist"></div>
+		}
+	</script>
 
-					</section>
+	<title>暑さ指数可視化マップ</title>
 
-					<section >
-						<h2>出典</h2>
-						<blockquote>
-						暑さ指数データは、<a href="https://www.wbgt.env.go.jp/data_service.php" target="_blank">こちら</a>を、観測点の位置情報は、<a href="https://mm-s.biz/wbgt/index.html" target="_blank">こちら</a>をそれぞれ参照しました。
-					</blockquote>
-					<!--<section id="atusarank">
-						<h2>暑さランキング ＴＯＰ５０</h2>
-						<blockquote>
-						観測地点における暑さ指数の実測値をランキング形式で掲載しています。
-						</blockquote>
+</head>
+<body>
 
-						<iframe src= "rank/index.html" width="100%" height="500px"></iframe>
+	<div id="menu" class="fixed top-0 mt-4 left-1/2 -translate-x-1/2">
 
-					</section>-->
+<select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+  <option selected>Choose a country</option>
+  <option value="US">United States</option>
+  <option value="CA">Canada</option>
+  <option value="FR">France</option>
+  <option value="DE">Germany</option>
+</select>
 
+	</div>
+	<div id="map"></div>
 
-					<section id="intro"><span id ="1"></span>
-						<h2>暑さ指数とは？</h2>
+	<a href="javascript:void(0)" onClick="display()"><div id="navigation_menu" class="bg-gray-500 hover:bg-gray-300 py-2 px-3 bg-opacity-50 text-white top-0 right-0 mt-4 mr-4"></div></a>
 
-<blockquote>
-暑さ指数（WBGT（湿球黒球温度）：Wet Bulb Globe Temperature）は、熱中症を予防することを目的として1954年にアメリカで提案された指標です。 単位は気温と同じ摂氏度（℃）で示されますが、その値は気温とは異なります。暑さ指数（WBGT）は人体と外気との熱のやりとり（熱収支）に着目した指標で、人体の熱収支に与える影響の大きい ①湿度、 ②日射・輻射(ふくしゃ)など周辺の熱環境、 ③気温の３つを取り入れた指標です。
-</blockquote>
+	<!-- modal window -->
+	<div class="modal js-modal">
+		<div class="modal_bg" onClick="closed()"></div>
+		<div class="modal_content"><span class="closed" onClick="closed()">×</span>
 
-<div id="color_b">
-							☆色分けについて☆<br>
-							<span style="background-color: #ff0000;">　　</span> 危険（31℃以上）<br>
-							<span style="background-color: #ffa500;">　　</span> 厳重警戒（28～31℃）<br>
-							<span style="background-color: #ffff00;">　　</span> 警戒（25～28℃）<br>
-							<span style="background-color: #00ffff;">　　</span> 注意（21～25℃）<br>
-							<span style="background-color: #0000ff;">　　</span> ほぼ安全（21度未満）
-						</div>
-					</section>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-<br>
-					<section id="atusakiso">
+		</div>
 
-						<h2>熱中症の基礎知識</h2>
+	</div>
 
-						<blockquote>
-						・熱中症の基礎知識について、まとめました。
-						</blockquote>
-
-
-<h3 class="point">熱中症はどのようにして起こるのか？</h3>
-
-熱中症を引き起こす条件は、「環境」と「からだ」と「行動」によるものが考えられます。<br><br>
-「環境」の要因は、気温が高い、湿度が高い、風が弱いなどがあります。<br><br>
-「からだ」の要因は、激しい労働や運動によって体内に著しい熱が生じたり、暑い環境に体が十分に対応できないことなどがあります。<br><br>
-その結果、熱中症を引き起こす可能性があります。<br><br>
-
-人間の身体は、平常時は体温が上がっても汗や皮膚温度が上昇することで体温が外へ逃げる仕組みとなっており、体温調節が自然と行われます。<br><br>
-
-<img src="images/heat1.png" width="100%">
-
-<h3 class="point">熱中症を引き起こす３つの要因</h3>
-・要因その１   環境<br><br>
-<img src="images/heat2.png" width="100%">
-・要因その２   からだ<br><br>
-<img src="images/heat3.png" width="100%">
-・要因その３   行動<br><br>
-<img src="images/heat4.png" width="100%">
-体温の上昇と調整機能のバランスが崩れると、どんどん身体に熱が溜まってしまいます。このような状態が熱中症です。<br><br>
-
-<h3 class="point">熱中症を予防するにはどうしたらよいの？</h3>
-<img src="images/heat5.png" width="100%">
-・無理をせず徐々に身体を暑さに慣らしましょう<br>
-・室内でも温度を測りましょう<br>
-・体調の悪いときは特に注意しましょう
-<br><br>
-<h3 class="point">新しい生活様式と熱中症予防</h3>
-厚生労働省は<a href="https://www.mhlw.go.jp/content/10900000/000635190.pdf" target="_blank">令和２年度の熱中症予防行動の留意点について <i class="fas fa-external-link-alt"></i></a>の中で、マスク着用の留意点を述べています。<br><br>
-<blockquote>
-・屋外で人と十分な距離（少なくとも2m以上）が確保できる場合、マスクを外す。<br>
-・マスク着用時には、喉が渇いていなくても、こまめに水分補給を心がける。
-</blockquote>
-他にも熱中症予防の行動について、記載がありますので、ぜひ、参考にしてみてください。
-
-
-					</section>
-
-					<section id="kanren"><span id ="7"></span>
-						<h2>関連情報</h2>
-
-							<div class="row">
-							<div class="col-6 col-12-xsmall">
-							<h3 class="ti">参考文献</h3>
-									<ul>
-										<li><a href="https://linkevery2s.github.io/bsinsight/index.html" target="_blank">防災INSIGHT <i class="fas fa-external-link-alt"></i></a></li>
-										<li><a href="https://mm-s.biz/wbgt/index.html" target="_blank">熱中症 WebAPI <i class="fas fa-external-link-alt"></i></a></li>
-										<li><a href="https://www.wbgt.env.go.jp/" target="_blank">環境省 熱中症予防情報サイト <i class="fas fa-external-link-alt"></i></a></li>
-									</ul>
-							</div>
-								<div class="col-6 col-12-xsmall">
-									<h3 class="ti">ＱＲコード</h3>
-									本ＷＥＢのＱＲコードです。<br>
-									<img src="images/qr.png">
-<br>QRコードは（株）デンソーウェーブの登録商標です。
-								</div>
-							</div>
-					</section>
-
-※個人で開発したWEBです。正確な情報は環境省のウェブサイト等をご参照ください。<br>
-※なお、利用規約は、<a href="https://linkevery2s.github.io/bsinsight/#rule" target="_blank">防災INSIGHT 利用規約 <i class="fas fa-external-link-alt"></i></a>に準拠します。
-
-
-			</div>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v7.0" nonce="FCuCkDhT"></script>
-<div class="fb-like" data-href="https://linkevery2s.github.io/heatstroke/index.html" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
-<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-					<ul class="copyright">
-						<li>&copy; 仁志</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
-
-		<div id="page_top"><a href="#"></a></div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/heat.js"></script>
-
-			<script>
-
-				$(function() {
-    				var topBtn = $('#page_top');
-    				topBtn.hide();
-
-    				$(window).scroll(function () {
-
-        			if ($(this).scrollTop() > 100) {
-            			topBtn.fadeIn();
-
-        			} else {
-            			topBtn.fadeOut();
-        			}
-    			});
-
-					topBtn.click(function () {
-						$('body,html').animate({scrollTop: 0}, 1000);
-						return false;
-    				});
-				});
-
-			</script>
-
-	</body>
+</body>
 </html>

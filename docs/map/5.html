@@ -4,19 +4,17 @@
 	<title>マップ５</title>
   	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="css/map.css" />
- <link rel="stylesheet" href="css/leaflet.css" />
+
+    <link rel="stylesheet" href="css/default.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	<script src="js/leaflet.js"></script>
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="icon/L.Icon.Pulse.css" />
-    <script src="icon/L.Icon.Pulse.js"></script>
-    <link rel="stylesheet" href="src/easy-button.css" />
-    <script src="src/easy-button.js"></script>
-    <script src="js/5.js"></script><script src="js/map.js"></script>
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+	<script src="js/map.js"></script>
+    <script src="js/heat.js"></script>
 	</head>
 
-	<body onload="start();">
+	<body onload="start(5);">
 
 		<div id="map"></div>
 	
