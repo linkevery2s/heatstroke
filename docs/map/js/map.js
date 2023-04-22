@@ -9,7 +9,7 @@ let map_display = () =>{
 
     map = L.map('map', {minZoom: 5, maxZoom: 8, zoomControl: false});
     L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://maps.gsi.go.jp/development/ichiran.html" target="_blank">地理院タイル</a>'
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | &copy; 仁志, <a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">CC BY 4.0</a>'
     }).addTo(map);
     map.setView([37.40, 136], 5);
     L.control.zoom({position: 'topleft'}).addTo(map);
