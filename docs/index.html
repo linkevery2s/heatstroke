@@ -1,7 +1,21 @@
-<!DOCTYPE html>
-<html lang='ja'>
-<head>
-	<meta charset='UTF-8' name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+<!DOCTYPE HTML>
+<html lang="ja">
+<title>暑さ指数可視化マップ</title>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:title" content="暑さ指数可視化マップ" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="images/top.png" />
+	<meta property="og:description" content="暑さ指数や湿度などの気象情報から、熱中症のリスクを警告し、適切な対策を提供するアプリです。日本の暑さはもはや災害です。暑さのリスクを事前に把握することで、体調管理にも役立ちます。アウトドアやスポーツ、夏場の作業などで活躍すること間違いなしです！" />
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="暑さ指数可視化マップ" />
+	<meta name="twitter:image" content="images/top.png" />
+	<meta name="twitter:description" content="暑さ指数や湿度などの気象情報から、熱中症のリスクを警告し、適切な対策を提供するアプリです。日本の暑さはもはや災害です。暑さのリスクを事前に把握することで、体調管理にも役立ちます。アウトドアやスポーツ、夏場の作業などで活躍すること間違いなしです！" />
+	<meta name="author" content="仁志">
+	<meta name="keywords" content="暑さ指数,熱中症,可視化"/>
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="shortcut icon" href="images/apple-touch-icon.png">
 
 	<!-- leaflet -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
@@ -69,7 +83,7 @@
 		.modal_content{
 			background: #ffffff;
 			padding: 10px;
-			height: 500px !important;
+			height: 450px !important;
 			overflow-y: scroll;
 			background: #2ca9e1;
 			border: 3px double #ffffff;
@@ -93,6 +107,11 @@
 		p a{
 			border-bottom: 1px dotted #ffffff;
 			
+		}
+
+		select {
+			-webkit-appearance: none;
+			appearance: none;
 		}
 
 	</style>
@@ -189,26 +208,24 @@
 		<div class="modal_content"><span class="closed" onClick="closed()">×</span>
 
 			<h2 class="text-3xl mb-4">本アプリについて</h2>
-				<p>環境省が導入している<a href="https://www.wbgt.env.go.jp/" target="_blank">「暑さ指数」</a>をマップに可視化するアプリケーションです。
-				</p>
+			<p>環境省が導入している<a href="https://www.wbgt.env.go.jp/" target="_blank">「暑さ指数」</a>をマップに可視化するアプリケーションです。
+			</p>
 
 			<h2 class="text-3xl mt-6 mb-4">暑さ指数とは？</h2>
-				<p>暑さ指数（WBGT（湿球黒球温度）：Wet Bulb Globe Temperature）は、熱中症を予防することを目的として1954年にアメリカで提案された指標です。 単位は気温と同じ摂氏度（℃）で示されますが、その値は気温とは異なります。暑さ指数（WBGT）は人体と外気との熱のやりとり（熱収支）に着目した指標で、人体の熱収支に与える影響の大きい ①湿度、 ②日射・輻射(ふくしゃ)など周辺の熱環境、 ③気温の３つを取り入れた指標です。
-				</p>
+			<p>暑さ指数（WBGT（湿球黒球温度）：Wet Bulb Globe Temperature）は、熱中症を予防することを目的として1954年にアメリカで提案された指標です。 単位は気温と同じ摂氏度（℃）で示されますが、その値は気温とは異なります。暑さ指数（WBGT）は人体と外気との熱のやりとり（熱収支）に着目した指標で、人体の熱収支に与える影響の大きい ①湿度、 ②日射・輻射(ふくしゃ)など周辺の熱環境、 ③気温の３つを取り入れた指標です。
+			</p>
 
 			<h2 class="text-3xl mt-6 mb-4">色分けについて</h2>
-				<span style="background-color: #ff0000;">　　</span> 危険（31℃以上）<br>
-				<span style="background-color: #ffa500;">　　</span> 厳重警戒（28～31℃）<br>
-				<span style="background-color: #ffff00;">　　</span> 警戒（25～28℃）<br>
-				<span style="background-color: #00ffff;">　　</span> 注意（21～25℃）<br>
-				<span style="background-color: #0000ff;">　　</span> ほぼ安全（21度未満）
+			<span style="background-color: #ff0000;">　　</span> 危険（31℃以上）<br>
+			<span style="background-color: #ffa500;">　　</span> 厳重警戒（28～31℃）<br>
+			<span style="background-color: #ffff00;">　　</span> 警戒（25～28℃）<br>
+			<span style="background-color: #00ffff;">　　</span> 注意（21～25℃）<br>
+			<span style="background-color: #0000ff;">　　</span> ほぼ安全（21度未満）
 
 			<h2 class="text-3xl mt-6 mb-4">オープンデータ</h2>
-				<p>以下の出典を仁志が加工・編集して開発しました。<br>
-					・環境省、<a href="https://www.wbgt.env.go.jp/data_service.php" target="_blank">暑さ指数(WBGT)予測値等 電子情報提供サービス</a>
-
-
-				</p>
+			<p>以下の出典を仁志が加工・編集して開発しました。<br>
+				・環境省、<a href="https://www.wbgt.env.go.jp/data_service.php" target="_blank">暑さ指数(WBGT)予測値等 電子情報提供サービス</a>
+			</p>
 
 
 
