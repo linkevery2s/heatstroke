@@ -1,7 +1,7 @@
 
 let b = 0;let marker1;let marker2; let gido; let gkeido;
 
-const url = "https://raw.githubusercontent.com/linkevery2s/heatstroke/master/docs/data/all.json";
+const url = "https://raw.githubusercontent.com/linkevery2s/heatstroke/master/data/all.json";
 const area_url = "https://linkevery2s.github.io/heatstroke/area/st.json";
 let map;
 

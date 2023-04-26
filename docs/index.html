@@ -93,7 +93,7 @@
 			map.innerHTML = '<iframe src="map/1.html"></iframe>';
 
 				/* fetchで取得 */
-			const res = await fetch("https://raw.githubusercontent.com/linkevery2s/heatstroke/master/docs/data/all.json");
+			const res = await fetch("https://raw.githubusercontent.com/linkevery2s/heatstroke/master/data/all.json");
 			const data = await res.json();
 
 			console.log(data[0][2]);
