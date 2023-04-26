@@ -69,6 +69,11 @@
 		.modal_content{
 			background: #ffffff;
 			padding: 10px;
+			height: 500px !important;
+			overflow-y: scroll;
+			background: #2ca9e1;
+			border: 3px double #ffffff;
+			color: #ffffff;
 		}
 
 		iframe {
@@ -83,6 +88,11 @@
 			height: 100%;
 			width: 100%;
 
+		}
+
+		p a{
+			border-bottom: 1px dotted #ffffff;
+			
 		}
 
 	</style>
@@ -178,12 +188,29 @@
 		<div class="modal_bg" onClick="closed()"></div>
 		<div class="modal_content"><span class="closed" onClick="closed()">×</span>
 
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			<h2 class="text-3xl mb-4">本アプリについて</h2>
+				<p>環境省が導入している<a href="https://www.wbgt.env.go.jp/" target="_blank">「暑さ指数」</a>をマップに可視化するアプリケーションです。
+				</p>
+
+			<h2 class="text-3xl mt-6 mb-4">暑さ指数とは？</h2>
+				<p>暑さ指数（WBGT（湿球黒球温度）：Wet Bulb Globe Temperature）は、熱中症を予防することを目的として1954年にアメリカで提案された指標です。 単位は気温と同じ摂氏度（℃）で示されますが、その値は気温とは異なります。暑さ指数（WBGT）は人体と外気との熱のやりとり（熱収支）に着目した指標で、人体の熱収支に与える影響の大きい ①湿度、 ②日射・輻射(ふくしゃ)など周辺の熱環境、 ③気温の３つを取り入れた指標です。
+				</p>
+
+			<h2 class="text-3xl mt-6 mb-4">色分けについて</h2>
+				<span style="background-color: #ff0000;">　　</span> 危険（31℃以上）<br>
+				<span style="background-color: #ffa500;">　　</span> 厳重警戒（28～31℃）<br>
+				<span style="background-color: #ffff00;">　　</span> 警戒（25～28℃）<br>
+				<span style="background-color: #00ffff;">　　</span> 注意（21～25℃）<br>
+				<span style="background-color: #0000ff;">　　</span> ほぼ安全（21度未満）
+
+			<h2 class="text-3xl mt-6 mb-4">オープンデータ</h2>
+				<p>以下の出典を仁志が加工・編集して開発しました。<br>
+					・環境省、<a href="https://www.wbgt.env.go.jp/data_service.php" target="_blank">暑さ指数(WBGT)予測値等 電子情報提供サービス</a>
+
+
+				</p>
+
+
 
 		</div>
 

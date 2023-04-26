@@ -23,15 +23,14 @@ let map_display = () =>{
 
         let div = L.DomUtil.create('div', 'info_legend'),
         grades = ["危険", "厳重警戒", "警戒", "注意", "ほぼ安全"],
-        labels = ['暑さ指数'],
+        labels = ["暑さ指数"],
         from, to;
 
         for (let i = 0; i < grades.length; i++) {
             from = grades[i];
 
             labels.push(
-                '<span style="background:' + getColor(from) + '">　</span> ' +
-                from);
+                '<span style="background:' + getColor(from) + '">　</span> ' + from);
         }
 
         div.innerHTML = labels.join('<br>');
