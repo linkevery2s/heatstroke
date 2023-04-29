@@ -42,6 +42,7 @@ let start = async (x) =>{
 			if (list_data > 30){
 
 				L.marker([ido[i], keido[i]],{icon: L.divIcon({className: 'marker1'})}).addTo(map);
+				
 
 			}else if (list_data > 27){
 
