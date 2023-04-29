@@ -24,18 +24,15 @@ let start = async (x) =>{
     	/* 暑さ指数データ格納 */
 		let list_data = data[i + 1][x + 1] / 10;
 
-			if ( data2[i].ST_CODE = data[i+1][0]){
-
-				/* 都道府県 */
-				js_data2[i] = data2[i].AREA;
+			if ( data2[i].id = data[i+1][0]){
 
 				/* 観測所 */
-				j_data2[i] = data2[i].ST;
+				j_data2[i] = data2[i].name;
 
 				/* 緯度、経度 */
-				ido[i] = data2[i].LAT;
+				ido[i] = data2[i].lat;
 
-				keido[i] = data2[i].LNG;
+				keido[i] = data2[i].lng;
 
 
 			}else{}
