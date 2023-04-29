@@ -24,6 +24,10 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linkevery2s/sourcecode/modal_window/main.css">
 	<script src="https://cdn.jsdelivr.net/gh/linkevery2s/sourcecode/modal_window/main.js"></script>
 
+	<!-- lightbox -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.js" integrity="sha512-oaWLach/xXzklmJDBjHkXngTCAkPch9YFqOSphnw590sy86CVEnAbcpw17QjkUGppGmVJojwqHmGO/7Xxx6HCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 	<!-- tailwind -->
 	<script src="https://cdn.tailwindcss.com"></script>
 
@@ -66,12 +70,26 @@
 			cursor: pointer;
 		}
 
+		#link{
+			position: fixed;
+			z-index: 20;
+		}
+
+		#link:before {
+			font-family: 'Font Awesome 5 Free';
+			content: "\f029";
+			font-weight: 900;
+			font-size: 1em;
+			cursor: pointer;
+		}
+
 		.modal_content{
 			background: #ffffff;
 			padding: 10px;
 			height: 450px !important;
-			overflow-y: scroll;
+
 		}
+
 
 		iframe {
 			margin: 0;
@@ -187,6 +205,13 @@
 
 		}
 
+		window.display2 = () => {
+
+			exp.innerHTML = '<iframe width="100%" src="kaisetu.html"></iframe>';
+
+			display();
+		}
+
 	</script>
 
 	<title>暑さ指数可視化マップ</title>
@@ -203,38 +228,23 @@
 
 	<div id="map"></div>
 
-	<a href="javascript:void(0)" onClick="display()"><div id="navigation_menu" class="bg-gray-500 hover:bg-gray-300 py-2 px-3 bg-opacity-50 text-white top-0 right-0 mt-4 mr-4"></div></a>
+	<!-- nav menu -->
+	<a href="javascript:void(0)" onClick="display2()"><div id="navigation_menu" class="bg-gray-500 hover:bg-gray-300 py-2 px-3 bg-opacity-50 text-white top-0 right-0 mt-4 mr-4"></div></a>
+
+	<!-- qr -->
+	<a href="images/qr.png" data-lightbox="image"><div id="link" class="border rounded border-black bg-white py-2 px-3 bottom-0 left-0 mb-4 ml-4"></div></a>
 
 	<!-- modal window -->
 	<div class="modal js-modal">
 		<div class="modal_bg" onClick="closed()"></div>
-		<div class="modal_content"><!--<span class="closed" onClick="closed()">×</span>-->
+		<div class="modal_content"><span class="closed" onClick="closed()">×</span>
 
-			<h2 class="text-3xl mb-4 pb-1">本アプリについて</h2>
-			<p>環境省が導入している<a href="https://www.wbgt.env.go.jp/" target="_blank">「暑さ指数」</a>をマップに可視化するアプリケーションです。
-			</p>
-
-			<h2 class="text-3xl mt-6 mb-4 pb-1">暑さ指数とは？</h2>
-			<p>暑さ指数（WBGT（湿球黒球温度）：Wet Bulb Globe Temperature）は、熱中症を予防することを目的として1954年にアメリカで提案された指標です。 単位は気温と同じ摂氏度（℃）で示されますが、その値は気温とは異なります。暑さ指数（WBGT）は人体と外気との熱のやりとり（熱収支）に着目した指標で、人体の熱収支に与える影響の大きい ①湿度、 ②日射・輻射(ふくしゃ)など周辺の熱環境、 ③気温の３つを取り入れた指標です。
-			</p>
-
-			<h2 class="text-3xl mt-6 mb-4 pb-1">色分けについて</h2>
-			<span style="background-color: #ff0000;">　　</span> 危険（31℃以上）<br>
-			<span style="background-color: #ffa500;">　　</span> 厳重警戒（28～31℃）<br>
-			<span style="background-color: #ffff00;">　　</span> 警戒（25～28℃）<br>
-			<span style="background-color: #00ffff;">　　</span> 注意（21～25℃）<br>
-			<span style="background-color: #0000ff;">　　</span> ほぼ安全（21度未満）
-
-			<h2 class="text-3xl mt-6 mb-4 pb-1">オープンデータ</h2>
-			<p>以下の出典を仁志が加工・編集して開発しました。<br>
-				・環境省、<a href="https://www.wbgt.env.go.jp/data_service.php" target="_blank">暑さ指数(WBGT)予測値等 電子情報提供サービス</a>
-			</p>
-
-
+			<span id="exp"></span>
 
 		</div>
 
 	</div>
+
 
 </body>
 </html>

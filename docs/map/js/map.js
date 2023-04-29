@@ -49,8 +49,6 @@ let getColor = (d) => {
     '#0000ff';
 }
 
-
-
 let GPS = () =>{
 	if (navigator.geolocation) {
      navigator.geolocation.getCurrentPosition(gps_get,gps_error);
