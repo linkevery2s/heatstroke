@@ -5,11 +5,11 @@ const url = "https://raw.githubusercontent.com/linkevery2s/heatstroke/master/dat
 const area_url = "https://linkevery2s.github.io/heatstroke/area/st.json";
 let map;
 
-let map_display = () =>{
+let map_display = async () =>{
 
     map = L.map('map', {minZoom: 5, maxZoom: 8, zoomControl: false});
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | &copy; 仁志, <a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">CC BY 4.0</a><br>最終更新日：<span id="last_date"></span>'
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | &copy; 仁志, <a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">CC BY 4.0</a><br>最終更新日時：<span id="last_date"></span>'
     }).addTo(map);
     map.setView([37.40, 136], 5);
     L.control.zoom({position: 'topleft'}).addTo(map);
@@ -39,6 +39,8 @@ let map_display = () =>{
 
     legend.addTo(map);
 
+    last();
+
 }
 
 let getColor = (d) => {
@@ -47,6 +49,16 @@ let getColor = (d) => {
     d == "警戒" ? '#ffff00' :
     d == "注意" ? '#00ffff' :
     '#0000ff';
+}
+
+let last = async () =>{
+
+    /* fetchで取得 */
+    const res = await fetch("https://raw.githubusercontent.com/linkevery2s/heatstroke/master/data/lastupdate.json");
+    const data = await res.json();
+
+    last_date.innerHTML = data[0].lastupdate;
+
 }
 
 let GPS = () =>{
