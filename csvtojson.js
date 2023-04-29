@@ -10,4 +10,4 @@ await Deno.writeTextFile("data/all.json", JSON.stringify(result));
 
 let date = new Date().toLocaleString({ timeZone: 'Asia/Tokyo' });
 
-const write = Deno.writeTextFile("./data/lastupdate.json", '[{"lastupdate":' + '"' + date + '"}]');
+const write = Deno.writeTextFile("data/lastupdate.json", '[{"lastupdate":' + '"' + date + '"}]');
