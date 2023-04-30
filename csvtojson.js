@@ -8,6 +8,20 @@ const result = await parse(data);
 await Deno.writeTextFile("data/all.json", JSON.stringify(result));
 
 
-let date = new Date().toLocaleString({ timeZone: 'Asia/Tokyo' });
+let date = new Date();
 
-const write = Deno.writeTextFile("data/lastupdate.json", '[{"lastupdate":' + '"' + date + '"}]');
+const year = date.getFullYear();
+
+const month = date.getMonth() + 1;
+
+const day = date.getDate();
+
+const hour = date.getHours();
+
+const minute = date.getMinutes();
+
+
+const now_day = year + "年" + month + "月" + day + "日" + hour + "時" + minute + "分";
+
+
+const write = Deno.writeTextFile("./data/lastupdate.json", '[{"lastupdate":' + '"' + now_day + '"}]');
