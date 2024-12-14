@@ -156,18 +156,19 @@
 			map.innerHTML = '<iframe src="map/1.html"></iframe>';
 
 				/* fetchで取得 */
-			const res = await fetch("https://raw.githubusercontent.com/linkevery2s/heatstroke/master/data/all.json");
+			const res = await fetch("https://raw.githubusercontent.com/linkevery2s/heatstroke/refs/heads/master/data/all.json");
 			const data = await res.json();
 
-			console.log(data[0][2]);
+			//console.log(data[0][2]);
 
-			console.log(data[0][2].slice(0, 4) + "年" + data[0][2].slice(4, -4) + "月" + data[0][2].slice(6, -2) + "日　" +  data[0][2].slice(-2) + "時");
+			//console.log(data[0][2].slice(0, 4) + "年" + data[0][2].slice(4, -4) + "月" + data[0][2].slice(6, -2) + "日　" +  data[0][2].slice(-2) + "時");
 
 			let day = new Array(10);
 			let month = document.getElementById('month');
 
 			for (let i = 2; i < 12; i++){
 				day[i] = data[0][i];
+				console.log(day[i]);
 
 				let option = document.createElement('option');
 				option.setAttribute('value', i - 2);
