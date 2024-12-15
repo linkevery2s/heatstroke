@@ -54,7 +54,7 @@ let getColor = (d) => {
 let last = async () =>{
 
     /* fetchで取得 */
-    const res = await fetch("https://raw.githubusercontent.com/linkevery2s/heatstroke/master/data/lastupdate.json");
+    const res = await fetch("../../data/lastupdate.json");
     const data = await res.json();
 
     last_date.innerHTML = data[0].lastupdate;
