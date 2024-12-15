@@ -1,8 +1,8 @@
 
 let b = 0;let marker1;let marker2; let gido; let gkeido;
 
-const url = "https://raw.githubusercontent.com/linkevery2s/heatstroke/refs/heads/master/data/all.json";
-const area_url = "https://linkevery2s.github.io/heatstroke/area/st.json";
+const url = "../../data/all.json";
+const area_url = "../area/st.json";
 let map;
 
 let map_display = async () =>{
